@@ -1,0 +1,30 @@
+[
+    {
+        "food": "pickled jalapenos",
+        "amount": "1 jar"
+    },
+    {
+        "food": "mayonnaise",
+        "amount": "1 jar"
+    },
+    {
+        "food": "bread and butter pickles",
+        "amount": "1 jar"
+    },
+    {
+        "food": "broccoli",
+        "amount": "1 bag"
+    },
+    {
+        "food": "grapes",
+        "amount": "1 bag"
+    },
+    {
+        "food": "rice",
+        "amount": "1 container"
+    },
+    {
+        "food": "fridge",
+        "amount": "70% full"
+    }
+]
