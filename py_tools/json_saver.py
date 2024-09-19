@@ -3,7 +3,7 @@ import os
 from datetime import datetime
 
 
-def save_json(data, name, destination_folder='JSON', debug=False):
+def save_json(data, name, destination_folder='JSON-USER-DATA', debug=False):
     
     path = os.path.join("static", destination_folder, name, datetime.now().strftime("%m-%d-%Y"))
     
