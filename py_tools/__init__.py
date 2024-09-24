@@ -1,1 +1,1 @@
-from env_translator import *
+from .env_translator import *

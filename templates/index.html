@@ -2,25 +2,67 @@
 
 {% block hero %}
 <div class="hero">
-    <div class="hero_content">
+    <div class="hero-content">
       <h1>Take Control of your</br></h1><h1 class="ttl">FRIDGY</h1>
       <div class="explore">
-        <p><button>Let's GO!</button> Fridge <strong>Your way.</strong></p>
+        <p><a href="{{ url_for('github.login') }}"><button class="load-show">Let's GO!</button></a> Fridge <strong>Your way.</strong></p>
       </div>
     </div>
     <div class="picture">
       <p>Image made with <a href="https://openai.com/index/dall-e-2/" target="_blank">DALL-E</a>
     </div>
+    <script src="{{ url_for('static', filename='js/load.js')}}"></script>
+    
 {% endblock %}
 
 {% block content %}
-Lorem ipsum odor amet, consectetuer adipiscing elit. Blandit elementum purus lacinia penatibus taciti; adipiscing curabitur potenti. Senectus amet eu sagittis nunc odio rhoncus elit tortor litora. Est natoque vitae ex nibh himenaeos mus. Ipsum velit nisl diam maximus id ornare. Elit pulvinar odio viverra per iaculis. Rutrum amet porttitor risus sollicitudin tellus litora. Aliquam vulputate libero mi pulvinar eleifend auctor tellus luctus sociosqu. Elementum maecenas non posuere etiam nunc malesuada justo.
 
-Justo venenatis mi montes elit sociosqu velit maecenas. Taciti himenaeos montes rutrum ac amet finibus praesent. Neque convallis nunc hendrerit; semper scelerisque nisl. Urna elementum justo duis lectus rhoncus tempor nunc. Arcu vitae fringilla sodales quis imperdiet quam sed. Magnis vestibulum fames porttitor imperdiet at at tincidunt consequat ex. Odio aliquam tempor iaculis dapibus morbi mus aliquet netus.
+<div class="feature-box">
+  <div class="feature">
+    <svg class="feature-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+      <path d="M2 21H22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M4 18L4 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M8 14L8 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M12 11L12 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M16 11L16 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M20 5L20 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+    <h2>Elite Tracking</h2>
+    <hr>
+    <p>FRIDGY is a web application that helps you manage your fridge. It allows you to keep track of the food you have, the expiration dates, and the recipes you can make with the ingredients you have. It also helps you reduce food waste by reminding you of the expiration dates of your food items.</p>
+  </div>
+  <div class="feature">
+    <svg class="feature-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+      <path d="M5.59988 5.65676C6.79984 4.48521 9.79974 3.3138 11.5997 4.48521C14.9486 6.66473 12.8 10.3431 9.20016 10.9288C10.8001 10.9288 14 11.6318 14 14.4435C14 18.7942 9.19988 21.1845 5.6 19.4092C2.00012 17.6339 2 14.7573 2 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M19.0006 10C18.052 13.7503 14.9728 13.2464 13.1992 12.3941" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+      <path d="M19 5L19 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M16 4C17.5 4.43301 19.5 4.86603 22 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+    <h2>Identifying Cultured Foods</h2>
+    <hr>
+    <p>FRIDGY uses a barcode scanner to scan the food items in your fridge. It then stores the information in a database and displays it on the web application. You can add, edit, and delete food items, as well as search for recipes based on the ingredients you have.</p>
+  </div>
+  <div class="feature">
+    <svg class="feature-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+      <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+      <path d="M12 8V12L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <h2>Lightning Fast</h2>
+    <hr>
+    <p>FRIDGY helps you save time and money by keeping track of the food you have and the expiration dates. It also helps you reduce food waste by reminding you of the expiration dates of your food items. FRIDGY is easy to use and can be accessed from any device with an internet connection.</p>
+  </div>
+  <div class="feature">
+    <svg class="feature-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+      <path d="M18 2V4M6 2V4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M10 17L9.99999 13.3472C9.99999 13.1555 9.86325 13 9.69458 13H9M13.6297 17L14.9842 13.3492C15.0475 13.1785 14.9128 13 14.7207 13H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M2.5 12.2432C2.5 7.88594 2.5 5.70728 3.75212 4.35364C5.00424 3 7.01949 3 11.05 3H12.95C16.9805 3 18.9958 3 20.2479 4.35364C21.5 5.70728 21.5 7.88594 21.5 12.2432V12.7568C21.5 17.1141 21.5 19.2927 20.2479 20.6464C18.9958 22 16.9805 22 12.95 22H11.05C7.01949 22 5.00424 22 3.75212 20.6464C2.5 19.2927 2.5 17.1141 2.5 12.7568V12.2432Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M6 8H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <h2>Mindless errands</h2>
+    <hr>
+    <p>FRIDGY helps you save time and money by keeping track of the food you have and the expiration dates. It also helps you reduce food waste by reminding you of the expiration dates of your food items. FRIDGY is easy to use and can be accessed from any device with an internet connection</p>
+  </div>
+</div>
+<script src="{{ url_for('static',filename='js/scroll.js') }}"></script>
 
-Lacinia euismod primis natoque mollis ex vel tristique porttitor cubilia. Aliquam pellentesque pharetra a vitae dolor ligula sapien arcu. Nibh hendrerit accumsan montes platea nibh mi orci dignissim. Mi potenti rhoncus felis volutpat dis magnis leo. Faucibus suspendisse gravida nec augue augue, dis rhoncus himenaeos. Maximus mi consectetur leo fermentum dui dapibus. Convallis nulla efficitur velit vel velit maximus nulla. Facilisis molestie imperdiet gravida cursus nulla fringilla.
-
-Primis dignissim mi varius; curabitur sem platea habitant dolor. Vivamus vivamus varius vivamus curae aenean platea lacinia pretium. Semper dui nam conubia varius vehicula hac. Augue mi arcu adipiscing porttitor felis metus. Velit senectus eget justo aliquet mus nullam. Enim facilisi fusce morbi proin senectus ipsum facilisi. Quisque torquent ex tellus id leo dolor eu.
-
-Varius fringilla platea rhoncus placerat fusce cras ultrices vel conubia. Amet lectus facilisis senectus lorem porta. Mi auctor urna himenaeos donec posuere accumsan quam urna. Dignissim senectus per dictum enim tortor quam. Velit id natoque finibus netus dignissim molestie. Risus turpis erat maximus cursus varius bibendum fames facilisi. Maecenas commodo varius himenaeos facilisi maximus curae dui massa pulvinar. Cras duis mauris ac nibh massa vehicula morbi condimentum consequat.
 {% endblock %}

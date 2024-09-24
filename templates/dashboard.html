@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/other.css') }}">
+<div class="feature-box">
+    <div data-aos="fade-up" data-aos-duration="750" class="feature" style="width: 50%; margin: 0;">
+        {% if predict == None %}
+            <h1>We need more fridge pics!</h1>
+        {% elif predict <= 3 %}
+            <h1>It's time to go shopping!</h1>
+            <p>You have {{predict}} days until your fridge goes under 30% capacity</p>
+        {% else %}
+            <h1>You're good for a while!</h1>
+            <p>You have {{predict}} days until your fridge goes under 30% capacity</p>
+        {% endif %}
+    </div>
+</div>    
+
+<div class="feature-box">
+            <div data-aos="fade-up-right" data-aos-duration="750" class="feature feature-large">
+                <h1>Fridge %</h1>
+                <canvas id="LineChart" width="900" height="400"></canvas>
+            </div>
+            <div data-aos="fade-up-left" data-aos-duration="750" class="feature feature-small">
+                {% if show == False %}
+                    <h1>You Uploaded your picture for today!</h1>
+                    <img class="fridge-pic" src="{{file}}">
+                {% else %}
+                <form method="POST" enctype="multipart/form-data" id="uploadForm">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    <svg class="feature-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                            <path d="M7.00018 6.00055C5.77954 6.00421 5.10401 6.03341 4.54891 6.2664C3.77138 6.59275 3.13819 7.19558 2.76829 7.96165C2.46636 8.58693 2.41696 9.38805 2.31814 10.9903L2.1633 13.501C1.91757 17.4854 1.7947 19.4776 2.96387 20.7388C4.13303 22 6.10271 22 10.0421 22H13.9583C17.8977 22 19.8673 22 21.0365 20.7388C22.2057 19.4776 22.0828 17.4854 21.8371 13.501L21.6822 10.9903C21.5834 9.38805 21.534 8.58693 21.2321 7.96165C20.8622 7.19558 20.229 6.59275 19.4515 6.2664C18.8964 6.03341 18.2208 6.00421 17.0002 6.00055" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M17 7L16.1142 4.78543C15.732 3.82996 15.3994 2.7461 14.4166 2.25955C13.8924 2 13.2616 2 12 2C10.7384 2 10.1076 2 9.58335 2.25955C8.6006 2.7461 8.26801 3.82996 7.88583 4.78543L7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15.5 14C15.5 15.933 13.933 17.5 12 17.5C10.067 17.5 8.5 15.933 8.5 14C8.5 12.067 10.067 10.5 12 10.5C13.933 10.5 15.5 12.067 15.5 14Z" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M11.9998 6H12.0088" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <h1>Upload your daily pic!</h1>
+                        <form method="POST" enctype="multipart/form-data">
+                            <input type="file" name="file">
+                            <input class="load-show" type="submit" value="Upload">
+                        </form>
+                {% endif %}
+        </div>
+    </div>
+    <div class="feature-box">
+        <div data-aos="fade-up" data-aos-duration="750" class="feature feature-small" style="height: 500px;">
+            <h1 style="margin-bottom: 20px;">Ideal Days for Shopping in {{city['city']}}</h1>
+            <ul>
+                {% if days == None %}
+                    <li>No days found (try clearing your calendar).</li>
+                {% else %}
+                    {% for day in days %}
+                            <li style="margin-bottom: 10px;">{{day}}<a href="/create/{{day}}"><button style="padding-right: 10px; padding-left: 10px;">Create Event</button></a></li>
+                    {% endfor %}
+                {% endif %}
+
+            </ul>   
+        </div>
+        <div data-aos="fade-up" data-aos-duration="750" class="feature feature-large">
+            <h1>Food Items</h1>
+            <table>
+                <tr>
+                    <th>Food</th>
+                    <th>Amount</th>
+                    <th>Unit</th>
+                </tr>
+                {% if foods == [] %}
+                    <tr>
+                        <td colspan="3">No data available</td>
+                    </tr>
+                {% else %}
+                    {% for food in foods %}
+                        <tr>
+                            <td>{{ food[0] }}</td>
+                            <td>{{ food[1] }}</td>
+                            <td>{{ food[2] }}</td>
+                        </tr> 
+                    {% endfor %}   
+                {% endif %}
+  
+            </table>
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script>
+    var ctx = document.getElementById('LineChart').getContext('2d');
+    var lineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: {{ labels | safe }},
+            datasets: [
+                {
+                    label: 'Data Points',
+                    data: {{ values | safe }},
+                    backgroundColor: 'rgba(247, 148, 119, 0.2)',
+                    borderColor: 'rgb(238, 131, 98)',
+                    borderWidth: 5,
+                    lineTension: 0.3,
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            legend: {
+                display: false
+            },
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        display: false
+                    },
+                    ticks: {
+                        display: false,
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        display: true
+                    },
+                    ticks: {
+                        display: true,
+                    }
+                }]
+            }
+        }
+        
+    });
+
+</script>
+<script src="{{ url_for('static', filename='js/load.js')}}"></script>
+
+
+{% endblock %}
