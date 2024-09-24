@@ -322,3 +322,57 @@ hr {
 	border: none;
 	margin: 10px auto;
 }
+
+footer {
+	background: var(--primary-color);
+	color: white;
+	text-align: center;
+	padding: 10px 0;
+	position: relative;
+}
+#animated-text-strip{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	overflow: hidden;
+}
+
+#animated-text-strip .marquee {
+	white-space: nowrap;
+	animation: marquee 5s linear infinite;
+	max-width: none;
+}
+  
+@keyframes marquee {
+	0% {
+	  transform: translate(0, 0);
+	}
+	100% {
+	  transform: translate(-100%, 0);
+	}
+}
+  
+#animated-text-strip{
+	background: var(--primary-color);
+	padding: 1rem 0;
+}
+.marquee{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: white;
+}
+
+.catch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+	font-size: 3rem;
+	padding: 1rem;
+	margin: 3rem;
+}
+

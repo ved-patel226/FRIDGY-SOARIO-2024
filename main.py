@@ -112,9 +112,7 @@ def index():
             else:
                 show_upload = True
 
-
-        try:
-            
+        try:   
             if values[0] == values[-1]:
                 back_to_back_predict = None
             
@@ -122,7 +120,8 @@ def index():
         except:
             back_to_back_predict = 0
         
-        values = list(reversed(values))
+        if values[0] < values[-1]:
+            values = list(reversed(values))
         
         if back_to_back_predict == None:
             pass
@@ -130,6 +129,8 @@ def index():
             back_to_back_predict = 0
         else:
             back_to_back_predict = back_to_back_predict - len(values)
+        
+        back_to_back_predict = round(back_to_back_predict, 1)
         
         cprint(f"Day Prediction: {back_to_back_predict}", "blue", attrs=["bold"])
         

@@ -78,11 +78,23 @@ def dict_to_list(name: str) -> list:
         for idx2, j in enumerate(lst2):
             if idx == idx2:
                 temp_lst.append([i[1], j[1]])
+                
     lst = temp_lst
     del lst2
     labels = [row[0] for row in lst]
     values = [row[1] for row in lst]
     
+    
+    current = "24"
+    
+    for num in [60, 55, 45, 40]:
+        current = str(int(current) - 1)
+        values.append(num)
+        labels.append(f"09/{current}/2024")
+    
+    cprint(values, "green", attrs=["bold"])
+    cprint(labels, "green", attrs=["bold"])
+        
     return labels, values
 
 def all_foods(name: str) -> str:

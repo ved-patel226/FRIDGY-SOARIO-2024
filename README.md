@@ -1,12 +1,7 @@
 <p align="center">
-  <img src="https://img.icons8.com/?size=512&id=55494&format=png" width="20%" alt="FRIDGY-SOARIO-2024-logo">
-</p>
-<p align="center">
     <h1 align="center">FRIDGY-SOARIO-2024</h1>
 </p>
-<p align="center">
-    <em><code>❯ REPLACE-ME</code></em>
-</p>
+
 <p align="center">
 	<img src="https://img.shields.io/github/license/ved-patel226/FRIDGY-SOARIO-2024?style=flat&logo=opensourceinitiative&logoColor=white&color=f79477" alt="license">
 	<img src="https://img.shields.io/github/last-commit/ved-patel226/FRIDGY-SOARIO-2024?style=flat&logo=git&logoColor=white&color=f79477" alt="last-commit">
@@ -23,33 +18,22 @@
 
 <br>
 
-#####  Table of Contents
-
-- [ Overview](#-overview)
-- [ Features](#-features)
-- [ Repository Structure](#-repository-structure)
-- [ Modules](#-modules)
-- [ Getting Started](#-getting-started)
-    - [ Prerequisites](#-prerequisites)
-    - [ Installation](#-installation)
-    - [ Usage](#-usage)
-    - [ Tests](#-tests)
-- [ Project Roadmap](#-project-roadmap)
-- [ Contributing](#-contributing)
-- [ License](#-license)
-- [ Acknowledgments](#-acknowledgments)
-
----
 
 ##  Overview
 
-<code>❯ REPLACE-ME</code>
+<code>❯ Fridgy is a tool for tracking food in your fridge! You can make google calander events, get reminded of when to shop, and more!</code>
 
 ---
 
 ##  Features
 
-<code>❯ REPLACE-ME</code>
+<code>❯ 1. Graph to show fridge % over time</code>
+
+<code>❯ 2. Fridge-Empty Predictor</code>
+
+<code>❯ 3. Finding Ideal days to shop, taking acount your events and the weather</code>
+
+<code>❯ 4. Everything in your fridge</code>
 
 ---
 
@@ -61,16 +45,6 @@
     ├── main.py
     ├── py_tools
     │   ├── __init__.py
-    │   ├── __pycache__
-    │   │   ├── __init__.cpython-312.pyc
-    │   │   ├── ai.cpython-312.pyc
-    │   │   ├── calander.cpython-312.pyc
-    │   │   ├── env_translator.cpython-312.pyc
-    │   │   ├── json_editor.cpython-312.pyc
-    │   │   ├── mongo_db_editor.cpython-312.pyc
-    │   │   ├── weather.cpython-312.pyc
-    │   │   ├── week_refresh.cpython-312.pyc
-    │   │   └── wtforms_upload.cpython-312.pyc
     │   ├── ai.py
     │   ├── calander.py
     │   ├── env_translator.py
@@ -82,7 +56,6 @@
     │   └── wtforms_upload.py
     ├── static
     │   ├── Fridge-IMGS
-    │   │   ├── fridge.jpg
     │   │   └── ved-patel226
     │   ├── JSON
     │   │   └── ved-patel226
@@ -111,7 +84,7 @@
 
 | File | Summary |
 | --- | --- |
-| [main.py](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/main.py) | <code>❯ REPLACE-ME</code> |
+| [main.py](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/main.py) | <code>❯ Flask App</code> |
 
 </details>
 
@@ -119,9 +92,9 @@
 
 | File | Summary |
 | --- | --- |
-| [base.html](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/templates/base.html) | <code>❯ REPLACE-ME</code> |
-| [index.html](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/templates/index.html) | <code>❯ REPLACE-ME</code> |
-| [dashboard.html](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/templates/dashboard.html) | <code>❯ REPLACE-ME</code> |
+| [base.html](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/templates/base.html) | <code>❯ Base HTML file</code> |
+| [index.html](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/templates/index.html) | <code>❯ Homepage</code> |
+| [dashboard.html](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/templates/dashboard.html) | <code>❯ Dashboard with all information</code> |
 
 </details>
 
@@ -129,15 +102,15 @@
 
 | File | Summary |
 | --- | --- |
-| [env_translator.py](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/py_tools/env_translator.py) | <code>❯ REPLACE-ME</code> |
-| [week_refresh.py](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/py_tools/week_refresh.py) | <code>❯ REPLACE-ME</code> |
-| [weather.py](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/py_tools/weather.py) | <code>❯ REPLACE-ME</code> |
-| [json_editor.py](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/py_tools/json_editor.py) | <code>❯ REPLACE-ME</code> |
-| [ai.py](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/py_tools/ai.py) | <code>❯ REPLACE-ME</code> |
-| [calander.py](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/py_tools/calander.py) | <code>❯ REPLACE-ME</code> |
-| [wtforms_upload.py](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/py_tools/wtforms_upload.py) | <code>❯ REPLACE-ME</code> |
-| [json_saver.py](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/py_tools/json_saver.py) | <code>❯ REPLACE-ME</code> |
-| [mongo_db_editor.py](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/py_tools/mongo_db_editor.py) | <code>❯ REPLACE-ME</code> |
+| [env_translator.py](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/py_tools/env_translator.py) | <code>❯ Translates .env secrets to strings</code> |
+| [week_refresh.py](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/py_tools/week_refresh.py) | <code>❯ Deletes all user data everyweek</code> |
+| [weather.py](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/py_tools/weather.py) | <code>❯ Contacts weather API</code> |
+| [json_editor.py](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/py_tools/json_editor.py) | <code>❯ Converts DB data to usable data</code> |
+| [ai.py](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/py_tools/ai.py) | <code>❯ Communicates with LLM</code> |
+| [calander.py](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/py_tools/calander.py) | <code>❯ Contacts Google Calander API</code> |
+| [wtforms_upload.py](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/py_tools/wtforms_upload.py) | <code>❯ Old prototype for file uploads</code> |
+| [json_saver.py](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/py_tools/json_saver.py) | <code>❯ Old prototype for saving JSON data locally</code> |
+| [mongo_db_editor.py](https://github.com/ved-patel226/FRIDGY-SOARIO-2024/blob/main/py_tools/mongo_db_editor.py) | <code>❯ Makes it easier to communicate with MONGO</code> |
 
 </details>
 
@@ -147,7 +120,7 @@
 
 ###  Prerequisites
 
-**Python**: `version x.y.z`
+**Python**: `version 3.12.3`
 
 ###  Installation
 
@@ -168,6 +141,11 @@ Build the project from source:
 ❯ pip install -r requirements.txt
 ```
 
+4. Follow .ENV template and fill it in with your API keys
+```sh
+.env
+```
+
 ###  Usage
 
 To run the project, execute the following command:
@@ -175,22 +153,6 @@ To run the project, execute the following command:
 ```sh
 ❯ python main.py
 ```
-
-###  Tests
-
-Execute the test suite using the following command:
-
-```sh
-❯ pytest
-```
-
----
-
-##  Project Roadmap
-
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
 
 ---
 
@@ -241,12 +203,6 @@ Contributions are welcome! Here are several ways you can contribute:
 
 ##  License
 
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
-
----
-
-##  Acknowledgments
-
-- List any resources, contributors, inspiration, etc. here.
+This project is protected under the [Apache 2.0](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
 
 ---

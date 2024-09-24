@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="picture">
-      <p>Image made with <a href="https://openai.com/index/dall-e-2/" target="_blank">DALL-E</a>
+      <p>Image made with <a style="text-decoration: underline; color: #f79477; font-weight:900;" href="https://openai.com/index/dall-e-2/" target="_blank">DALL-E</a>
     </div>
     <script src="{{ url_for('static', filename='js/load.js')}}"></script>
     
@@ -29,7 +29,7 @@
   </svg>
     <h2>Elite Tracking</h2>
     <hr>
-    <p>FRIDGY is a web application that helps you manage your fridge. It allows you to keep track of the food you have, the expiration dates, and the recipes you can make with the ingredients you have. It also helps you reduce food waste by reminding you of the expiration dates of your food items.</p>
+    <p>FRIDGY provides you with detailed charts and insightful information on when it's time to stock up, all while taking into account your Google Calendar and even the weather to ensure you're prepared for any occasion.</p>
   </div>
   <div class="feature">
     <svg class="feature-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
@@ -40,7 +40,7 @@
   </svg>
     <h2>Identifying Cultured Foods</h2>
     <hr>
-    <p>FRIDGY uses a barcode scanner to scan the food items in your fridge. It then stores the information in a database and displays it on the web application. You can add, edit, and delete food items, as well as search for recipes based on the ingredients you have.</p>
+    <p>FRIDGY utilizes cutting-edge Gemini Vision technology to accurately identify a wide variety of foods in your kitchen. Whether it's cultured foods like yogurt or kombucha, fresh produce, or packaged items, FRIDGY can recognize and categorize it all.</p>
   </div>
   <div class="feature">
     <svg class="feature-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
@@ -49,7 +49,7 @@
     </svg>
     <h2>Lightning Fast</h2>
     <hr>
-    <p>FRIDGY helps you save time and money by keeping track of the food you have and the expiration dates. It also helps you reduce food waste by reminding you of the expiration dates of your food items. FRIDGY is easy to use and can be accessed from any device with an internet connection.</p>
+    <p>It only takes 10 seconds for FRIDGY to handle everything—from identifying your food to storing and managing it. Simply snap a picture of what's in your fridge and send it our way. We'll take care of the rest, effortlessly organizing and tracking your items so you don’t have to worry about a thing!</p>
   </div>
   <div class="feature">
     <svg class="feature-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
@@ -60,9 +60,23 @@
     </svg>
     <h2>Mindless errands</h2>
     <hr>
-    <p>FRIDGY helps you save time and money by keeping track of the food you have and the expiration dates. It also helps you reduce food waste by reminding you of the expiration dates of your food items. FRIDGY is easy to use and can be accessed from any device with an internet connection</p>
+    <p>
+      FRIDGY ensures you never run out of food by helping you plan and restock when needed. Plus, with seamless Google Calendar integration, it only shows you the available dates that fit your schedule, making grocery shopping and meal planning even more convenient!</p>
   </div>
 </div>
+<div id="animated-text-strip">
+  <span class="marquee">Seamless tracking, personalized, and lightning-fast⠀⠀⠀⠀⠀⠀&nbsp;</span>
+  <span class="marquee">Seamless tracking, personalized, and lightning-fast⠀⠀⠀⠀⠀⠀&nbsp;</span>
+  <span class="marquee">Seamless tracking, personalized, and lightning-fast⠀⠀⠀⠀⠀⠀&nbsp;</span>
+  <span class="marquee">Seamless tracking, personalized, and lightning-fast⠀⠀⠀⠀⠀⠀&nbsp;</span>
+</div>
+
+
+<div class="catch">
+  <h1>That's just FRIDGY</h1>
+  <a href="{{ url_for('github.login') }}"><button class="load-show">Let's GO!</button></a>
+</div>
+
 <script src="{{ url_for('static',filename='js/scroll.js') }}"></script>
 
 {% endblock %}
