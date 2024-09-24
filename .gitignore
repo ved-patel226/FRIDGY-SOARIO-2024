@@ -173,6 +173,12 @@ poetry.toml
 # LSP config files
 pyrightconfig.json
 
+google.json
+credentials.json
+web_credentials.json
+token.json
+token.pickle
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -198,5 +204,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,python
