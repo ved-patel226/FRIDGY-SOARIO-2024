@@ -138,7 +138,7 @@ Build the project from source:
 
 3. Install the required dependencies:
 ```sh
-❯ pip install -r requirements.txt
+❯ conda env create -f environment.yml
 ```
 
 4. Follow .ENV template and fill it in with your API keys
