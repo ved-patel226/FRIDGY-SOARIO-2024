@@ -7,9 +7,10 @@ import pickle
 import os
 
 try:
+    from py_tools.weather import ErrandDay
+except Exception as e:
+    print(f"Error importing ErrandDay: {e}")
     from .weather import ErrandDay
-except:
-    from weather import ErrandDay
 
 def load_credentials():
     creds = None

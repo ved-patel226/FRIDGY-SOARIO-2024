@@ -146,11 +146,6 @@ Build the project from source:
 .env
 ```
 
-5. Follow the JSON template and fill it with your google app JSON
-```sh
-credentials.json
-```
-
 ###  Usage
 
 To run the project, execute the following command:
